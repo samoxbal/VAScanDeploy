@@ -1,0 +1,10 @@
+---
+
+- name: Add keys
+  apt_key:
+    keyserver: "{{ url_apt_key }}"
+    id: "{{ id_apt_key }}"
+
+- name: Install Packages
+  apt: pkg={{ item }} state=installed force=yes
+  with_items: "{{ mongodb_packages }}"

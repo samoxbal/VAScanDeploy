@@ -1,0 +1,10 @@
+---
+
+mongo_port: 27017
+mongo_path: "app/db"
+mongo_log: "var/log/mongo"
+url_apt_key: "keyserver.ubuntu.com"
+id_apt_key: 0C49F3730359A14518585931BC711F9BA15703C6
+mongodb_repository: "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen"
+mongodb_packages:
+  - mongodb-org

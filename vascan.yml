@@ -1,0 +1,12 @@
+---
+
+- hosts: vascan
+  become: yes
+  remote_user: root
+  gather_facts: no
+  vars_files:
+    - env.yml
+  roles:
+    - mongodb
+    - nginx
+    - node
