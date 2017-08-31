@@ -12,6 +12,13 @@
 
 - name: Update configuration file
   template:
+    src: vascan.conf.j2
+    dest: /etc/haproxy/haproxy.cfg
+    owner: root
+    group: root
+    mode: 0640
+    validate: 'haproxy -f %s -c'
+    notify: restart haproxy
 
 
 - name: Start and enable service
