@@ -8,6 +8,6 @@
     - env.yml
   roles:
     - mongodb
-    - nginx
+    - haproxy
     - node
     - java8
